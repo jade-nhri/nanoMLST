@@ -18,6 +18,9 @@ RUN git clone https://github.com/jade-nhri/nanoMLST.git
 WORKDIR /opt/nanoMLST/nanoMLST
 RUN chmod +x *.py
 
+#albacore 2.3.1
+#This software requires the user to download manually!!!
+
 #samtools 1.7
 ADD https://github.com/samtools/samtools/releases/download/1.7/samtools-1.7.tar.bz2 /opt
 RUN apt-get update && apt-get install -y \
