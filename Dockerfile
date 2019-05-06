@@ -1,5 +1,10 @@
 FROM ubuntu:16.04
 
+##Download nanoMLST
+WORKDIR /opt
+RUN git clone https://github.com/jade-nhri/nanoMLST.git
+WORKDIR /opt/nanoMLST/nanoMLST
+RUN chmod +x *.py
 
 RUN apt-get update && apt-get install -y \
     wget dos2unix \
