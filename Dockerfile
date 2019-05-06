@@ -1,11 +1,5 @@
 FROM ubuntu:16.04
 
-##Download nanoMLST
-WORKDIR /opt
-RUN git clone https://github.com/jade-nhri/nanoMLST.git
-WORKDIR /opt/nanoMLST/nanoMLST
-RUN chmod +x *.py
-
 RUN apt-get update && apt-get install -y \
     wget dos2unix \
     python3 \
@@ -18,6 +12,11 @@ RUN pip3 install pandas
 RUN pip3 install pyfastaq
 RUN pip3 install biopython
 
+##Download nanoMLST
+WORKDIR /opt
+RUN git clone https://github.com/jade-nhri/nanoMLST.git
+WORKDIR /opt/nanoMLST/nanoMLST
+RUN chmod +x *.py
 
 #samtools 1.7
 ADD https://github.com/samtools/samtools/releases/download/1.7/samtools-1.7.tar.bz2 /opt
