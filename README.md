@@ -52,6 +52,7 @@ Installation
 
 ## Usage
 - [readme](https://www.dropbox.com/s/qillbxtmaaw72mm/nanoMLST_readme.pdf?dl=0)
+
 To run Albacore:
 
 ``read_fast5_basecaller.py -f FLO-MIN106 -k SQK-LSK109 -t 100 -i fast5/ -r -s albacore2.3.1 -o fastq``
