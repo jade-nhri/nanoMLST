@@ -49,3 +49,23 @@ Installation
  > * parallel
  > * pandas
  > * pyfastaq
+
+## Usage
+``getfastq.py -i sequencing_summary.txt -q all.fastq -o HQ10_1000_1m -g 1m -d 1000 -qmin 10 -lmin 1000``
+
+``cd HQ10_1000_1m/``
+
+``minimap2 ../dualbcs.fa reads.fastq -k7 -A1 -m42 -w1 > out.paf``
+
+``getbcfq.py -m out.paf -i reads.fastq -o outfq > log_bin_fq``
+
+``binf5.py -i outfq/ -o binf5 -ss sequencing_summary_filtered.txt -f5 ../fast5/ -t 100``
+
+``runcons.py outfq/ binf5/ -t 100``
+
+``mkdir mlst``
+
+``cd mlst``
+
+``runtyping.py ../outfq/ mlst_HQ10_1000_1m_list.txt > log_mlst_HQ10_1000_1m_list``
+
