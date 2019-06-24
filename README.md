@@ -51,6 +51,12 @@ Installation
  > * pyfastaq
 
 ## Usage
+To run Albacore:
+``read_fast5_basecaller.py -f FLO-MIN106 -k SQK-LSK109 -t 100 -i fast5/ -r -s albacore2.3.1 -o fastq``
+``cd albacore2.3.1/workspace/pass``
+``cat fastq_runid*.fastq > all.fastq``
+
+To run nanoMLST:
 ``getfastq.py -i sequencing_summary.txt -q all.fastq -o HQ10_1000_1m -g 1m -d 1000 -qmin 10 -lmin 1000``
 
 ``cd HQ10_1000_1m/``
