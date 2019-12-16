@@ -69,9 +69,13 @@ Or, to run Guppy:
 ``guppy_basecaller -i multifast5/ -s guppy --flowcell FLO-MIN106 --kit SQK-LSK109 -r``
 
 To run nanoMLST with single script
+
 Single-fast5 files:
+
 ``nanoMLST.py -s sequencing_summary.txt -q reads.fastq -f5 fast5/ -o output -t 100``
+
 Multi-fast5 files:
+
 ``nanoMLST.py -s sequencing_summary.txt -q reads.fastq -f5 multifast5/ -o output -t 100 -m T``
 
 Or, to run nanoMLST step by step:
