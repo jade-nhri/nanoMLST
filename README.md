@@ -31,7 +31,8 @@ Installation
 - [samtools 1.7](http://www.htslib.org/)
 - [racon v1.3.1](https://github.com/isovic/racon)
 - [minimap 2.11](https://github.com/lh3/minimap2)
-- [nanopolish v0.10.2](https://github.com/jts/nanopolish)
+- [nanopolish v0.10.2](https://github.com/jts/nanopolish); [nanopolish v 0.11.0] supports for multi-fast5 files
+- [fast5_research] (https://github.com/nanoporetech/fast5_research)
 
 
 
@@ -64,7 +65,16 @@ To run Albacore:
 
 ``cat fastq_runid*.fastq > all.fastq``
 
-To run nanoMLST:
+Or, to run Guppy:
+``guppy_basecaller -i multifast5/ -s guppy --flowcell FLO-MIN106 --kit SQK-LSK109 -r``
+
+To run nanoMLST with single script
+Single-fast5 files:
+``nanoMLST.py -s sequencing_summary.txt -q reads.fastq -f5 fast5/ -o output -t 100``
+Multi-fast5 files:
+``nanoMLST.py -s sequencing_summary.txt -q reads.fastq -f5 multifast5/ -o output -t 100 -m T``
+
+Or, to run nanoMLST step by step:
 
 ``getfastq.py -i sequencing_summary.txt -q all.fastq -o HQ10_1000_1m -g 1m -d 1000 -qmin 10 -lmin 1000``
 
@@ -75,6 +85,8 @@ To run nanoMLST:
 ``getbcfq.py -m out.paf -i reads.fastq -o outfq > log_bin_fq``
 
 ``binf5.py -i outfq/ -o binf5 -ss sequencing_summary_filtered.txt -f5 ../fast5/ -t 100``
+
+``(binf5m.py -i outfq/ -o binf5 -f5 ../multifast5/ -t 100, for multi-fast5 files)``
 
 ``runcons.py outfq/ binf5/ -t 100``
 
