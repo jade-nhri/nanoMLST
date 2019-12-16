@@ -68,7 +68,8 @@ To run Albacore:
 Or, to run Guppy:
 ``guppy_basecaller -i multifast5/ -s guppy --flowcell FLO-MIN106 --kit SQK-LSK109 -r``
 
-To run nanoMLST with single script
+
+To run nanoMLST with single script:
 
 Single-fast5 files:
 
