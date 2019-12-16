@@ -11,6 +11,7 @@ RUN pip3 install networkx
 RUN pip3 install pandas
 RUN pip3 install pyfastaq
 RUN pip3 install biopython
+RUN pip3 install fast5_research
 
 ##Download nanoMLST
 WORKDIR /opt
