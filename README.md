@@ -52,7 +52,7 @@ Installation
  > * pyfastaq
 
 ## Usage
-- [readme](https://www.dropbox.com/s/qillbxtmaaw72mm/nanoMLST_readme.pdf?dl=0)
+- [readme](https://www.dropbox.com/s/f3i98sqy8ysvwmy/nanoMLST_readme.pdf?dl=0)
 
 - [typing results](https://www.dropbox.com/s/januri0rjsyy5do/Supplemental_file_3.xlsx?dl=0)
 
